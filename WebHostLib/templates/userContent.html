@@ -60,6 +60,7 @@
                         {% endfor %}
                     </tbody>
                 </table>
+                <a href="{{ url_for("disown_all_rooms") }}">Mark ALL rooms for deletion next maintenance.</a>
             {% else %}
                 You have not created any rooms yet!
             {% endif %}
@@ -92,6 +93,8 @@
                         {% endfor %}
                     </tbody>
                 </table>
+                <a style:"color:red;" "href="{{ url_for("disown_all_seeds") }}">Mark ALL seeds for deletion next
+            maintenance.</a>
             {% else %}
                 You have not generated any seeds yet!
             {% endif %}

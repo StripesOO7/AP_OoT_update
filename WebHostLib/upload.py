@@ -216,6 +216,19 @@ def user_content():
     seeds = select(seed for seed in Seed if seed.owner == session["_id"])
     return render_template("userContent.html", rooms=rooms, seeds=seeds)
 
+@app.route("/disown_all_rooms")
+def disown_all_rooms():
+    rooms = select(room for room in Room if room.owner == session["_id"])
+    for room in rooms:
+        room.owner = 0
+    return redirect(url_for("user_content"))
+
+@app.route("/disown_all_seeds")
+def disown_all_seeds():
+    seeds = select(seed for seed in Seed if seed.owner == session["_id"])
+    for seed in seeds:
+        seed.owner = 0
+    return redirect(url_for("user_content"))
 
 @app.route("/disown_seed/<suuid:seed>", methods=["GET"])
 def disown_seed(seed):
