@@ -32,6 +32,23 @@
 *.apsave
 *.BIN
 *.puml
+*.bin
+*.iso
+*.cue
+*.db
+*.db3
+
+ap_update.txt
+new_trackers.txt
+robots.txt
+pyvenv.cfg
+/WebHostLib/custom_games.txt
+/data/sprites
+/ap/
+/worlds/sm_map_rando/
+/worlds_disabled/
+/custom_worlds/
+*.apworld
 
 setups
 build
@@ -63,10 +80,7 @@ Output Logs/
 /installdelete.iss
 /data/user.kv
 /datapackage
-/datapackage_export.json
-/custom_worlds
-# stubgen output
-/out/
+/custom_worlds/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
